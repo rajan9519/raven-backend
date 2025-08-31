@@ -1,13 +1,13 @@
 # Table & Image Search Backend Service
 
-A sophisticated backend service that locates and extracts tables/images from technical manuals based on natural language queries. Features dual search modes: basic hybrid search and LLM-enhanced intelligent selection. Built with FastAPI, GPT-4, transformer embeddings, FAISS vector search, and BM25 keyword matching.
+A sophisticated backend service that locates and extracts tables/images from technical manuals based on natural language queries. Features dual search modes: basic hybrid search and LLM-enhanced intelligent selection. Built with FastAPI, GPT-4.1, transformer embeddings, FAISS vector search, and BM25 keyword matching.
 
 ## Features
 
 - 🔍 **Natural Language Search**: Query using operator-style requests like "Show me the actuator types comparison"
 - 🧠 **Dual Search Modes**: 
   - **Basic Hybrid Search**: Combines semantic understanding (transformer embeddings) with keyword matching (BM25)
-  - **LLM-Enhanced Search**: Uses GPT-4 to intelligently analyze queries and select the most relevant result
+  - **LLM-Enhanced Search**: Uses GPT-4.1 to intelligently analyze queries and select the most relevant result
 - 📊 **Multi-Content Support**: Searches tables, figures, and text blocks from technical documents
 - 📍 **Precise Citations**: Returns page numbers and bounding box coordinates for all results
 - ⚡ **Fast Performance**: Sub-second search responses with persistent FAISS indexing
@@ -83,7 +83,7 @@ deactivate
 ## API Endpoints
 
 ### `POST /llm-search`
-LLM-enhanced search with intelligent result selection. Uses GPT-4 to analyze query intent and select the most appropriate result from search candidates.
+LLM-enhanced search with intelligent result selection. Uses GPT-4.1 to analyze query intent and select the most appropriate result from search candidates.
 
 ## Example 1:
 **Request**:
@@ -394,7 +394,7 @@ Health check endpoint.
 - **Data Parser**: Extracts structured content from `mmd_lines_data.json` with LaTeX table/figure detection
 - **Hybrid Search Engine**: Combines transformer embeddings (FAISS) with BM25 keyword search using Reciprocal Rank Fusion
 - **Query Processor**: 
-  - GPT-4 powered query analysis and intent classification
+  - GPT-4.1 powered query analysis and intent classification
   - LLM-based intelligent result selection with confidence scoring
   - Dynamic search strategy optimization
 - **FastAPI Service**: RESTful API with dual search modes and comprehensive error handling
@@ -411,7 +411,7 @@ Health check endpoint.
 
 - **Semantic Understanding**: `gte-multilingual-base` embeddings for content similarity
 - **Keyword Precision**: BM25Okapi for exact term matching
-- **Intelligent Selection**: GPT-4 analyzes candidates and provides reasoning
+- **Intelligent Selection**: GPT-4.1 analyzes candidates and provides reasoning
 - **Persistent Indexing**: FAISS indices saved to disk for fast startup
 - **Citation Accuracy**: Precise page numbers and bounding box coordinates
 
@@ -465,7 +465,7 @@ All results include:
 - **`insufficient_info`**: No relevant content found matching query terms
 
 ### Error Handling
-- **LLM Fallback**: If GPT-4 API fails, system falls back to rule-based analysis
+- **LLM Fallback**: If GPT-4.1 API fails, system falls back to rule-based analysis
 - **API Resilience**: Graceful degradation when OpenAI API is unavailable
 - **Input Validation**: Proper HTTP status codes and error messages for malformed requests
 - **Confidence Thresholding**: Results below confidence threshold trigger `insufficient_info`
