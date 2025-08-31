@@ -95,9 +95,14 @@ class DataParser:
                     caption_match = re.search(caption_pattern, table_match.group(1))
                     caption = caption_match.group(1) if caption_match else f"Table {table_count}"
                     
-                    # Extract tabular content
-                    tabular_match = re.search(tabular_pattern, table_match.group(1), re.DOTALL)
-                    tabular_content = tabular_match.group(1) if tabular_match else table_match.group(1)
+                    # Extract all tabular content - find all tabular blocks within the table
+                    tabular_matches = re.findall(tabular_pattern, table_match.group(1), re.DOTALL)
+                    if tabular_matches:
+                        # Combine all tabular content
+                        tabular_content = '\n'.join(match.strip() for match in tabular_matches)
+                    else:
+                        # Fall back to full table content if no tabular blocks found
+                        tabular_content = table_match.group(1)
                     
                     citation = Citation(
                         page_no=page_num,
@@ -123,7 +128,6 @@ class DataParser:
                     ))
                 
         return tables
-    
     def extract_text_blocks(self) -> List[ContentItem]:
         """Extract significant text blocks from JSON data"""
         text_blocks = []

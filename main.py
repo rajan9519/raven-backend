@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 import uvicorn
 from typing import Dict, Any
+from contextlib import asynccontextmanager
 
 from models import SearchQuery, SearchResponse, LLMSearchQuery, LLMSearchResponse
 from service import TableImageSearchService
@@ -11,13 +12,33 @@ from config import Config
 # Initialize configuration
 config = Config()
 
+# Initialize service
+service = TableImageSearchService(config)
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Startup
+    try:
+        print("Starting up Table & Image Search API...")
+        service.initialize()
+        print("Service initialization completed successfully")
+    except Exception as e:
+        print(f"Failed to initialize service: {e}")
+        raise e
+    
+    yield
+    
+    # Shutdown (if needed)
+    print("Shutting down Table & Image Search API...")
+
 # Initialize FastAPI app
 app = FastAPI(
     title="Table & Image Search API",
     description="Backend service for locating and extracting tables/images from technical manuals",
     version="1.0.0",
     docs_url="/docs",
-    redoc_url="/redoc"
+    redoc_url="/redoc",
+    lifespan=lifespan
 )
 
 # Add CORS middleware
@@ -28,20 +49,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-# Initialize service
-service = TableImageSearchService(config)
-
-@app.on_event("startup")
-async def startup_event():
-    """Initialize the service on startup"""
-    try:
-        print("Starting up Table & Image Search API...")
-        service.initialize()
-        print("Service initialization completed successfully")
-    except Exception as e:
-        print(f"Failed to initialize service: {e}")
-        raise e
 
 @app.get("/")
 async def root() -> Dict[str, Any]:

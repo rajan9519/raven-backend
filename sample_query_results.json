@@ -1,0 +1,187 @@
+{
+  "Can you pull up the comparison of actuator types?": {
+    "status": "success",
+    "message": "Found a matching result",
+    "total_found": 1,
+    "results": [
+      {
+        "id": "table_11",
+        "content_type": "table",
+        "title": "Table 2-6 Actuator Feature Comparison",
+        "page_no": 36,
+        "bounding_box": {
+          "top_left_x": 243,
+          "top_left_y": 677,
+          "width": 1701,
+          "height": 1110
+        },
+        "relevance_score": 1.0,
+        "match_type": "hybrid",
+        "content_snippet": "{|l|l|l|}\n\\hline Actuator Type & Advantages & Disadvantages \\\\\n\\hline Spring-and-Diaphragm & \\begin{tabular}{l}\nLowest cost \\\\\nAbility to throttle without positioner Simplicity \\\\\nInherent fail-safe a..."
+      }
+    ]
+  },
+  "Show me the sizing factors for liquids.": {
+    "status": "success",
+    "message": "Found 2 relevant results",
+    "total_found": 2,
+    "results": [
+      {
+        "id": "table_14",
+        "content_type": "table",
+        "title": "Table 4-1. Representative Sizing Coefficients for Rotary Shaft Valves",
+        "page_no": 54,
+        "bounding_box": {
+          "top_left_x": 246,
+          "top_left_y": 319,
+          "width": 1698,
+          "height": 1327
+        },
+        "relevance_score": 0.6,
+        "match_type": "keyword",
+        "content_snippet": "{|l|l|l|l|l|l|l|}\n\\hline Valve Size (NPS) & Valve Style & Degrees of Valve Opening & \\(\\mathrm{C}_{\\mathrm{v}}\\) & \\(\\mathrm{F}_{\\mathrm{L}}\\) & \\(\\mathrm{X}_{\\mathrm{T}}\\) & \\(\\mathrm{F}_{\\mathrm{D}}..."
+      },
+      {
+        "id": "table_15",
+        "content_type": "table",
+        "title": "Table 4-2. Representative Sizing Coefficients for Design ED Single-Ported Globe Style Valve Bodies",
+        "page_no": 55,
+        "bounding_box": {
+          "top_left_x": 242,
+          "top_left_y": 317,
+          "width": 1703,
+          "height": 879
+        },
+        "relevance_score": 0.3,
+        "match_type": "keyword",
+        "content_snippet": "{|l|l|l|l|l|l|l|l|l|}\n\\hline Valve Size (NPS) & Valve Plug Style & Flow Characteristic & Port Dia. (in.) & Rated Travel (in.) & \\(\\mathrm{C}_{\\mathrm{V}}\\) & \\(\\mathrm{F}_{\\mathrm{L}}\\) & \\(\\mathrm{x}..."
+      }
+    ]
+  },
+  "I need the noise level reference values.": {
+    "status": "success",
+    "message": "Found a matching result",
+    "total_found": 1,
+    "results": [
+      {
+        "id": "table_192",
+        "content_type": "table",
+        "title": "Table 12-12. Separator Level Control Valve",
+        "page_no": 149,
+        "bounding_box": {
+          "top_left_x": 1151,
+          "top_left_y": 319,
+          "width": 793,
+          "height": 400
+        },
+        "relevance_score": 0.19999999999999998,
+        "match_type": "keyword",
+        "content_snippet": "{|l|l|}\n\\hline Parameter & Typical Value \\\\\n\\hline Fluid & Water \\\\\n\\hline Inlet Pressure & 300-1500 psig (21-103 bar) \\\\\n\\hline Outlet Pressure & 50-75 psig (3-5 bar) \\\\\n\\hline Flow Rate & \\(5-50 \\ma..."
+      }
+    ]
+  },
+  "Do we have a figure that explains cavitation?": {
+    "status": "success",
+    "message": "Found 3 relevant results",
+    "total_found": 3,
+    "results": [
+      {
+        "id": "figure_38",
+        "content_type": "figure",
+        "title": "Figure 5-4. Special Valve Design to Eliminate Cavitation",
+        "page_no": 58,
+        "bounding_box": {
+          "top_left_x": 390,
+          "top_left_y": 292,
+          "width": 361,
+          "height": 606
+        },
+        "relevance_score": 0.7333333333333333,
+        "match_type": "hybrid",
+        "content_snippet": "\\includegraphics[width=\\textwidth]{https://cdn.mathpix.com/cropped/2025_08_28_14c222ac7973e4f89cc8g-058.jpg?height=606&width=361&top_left_y=292&top_left_x=390}\n\\captionsetup{labelformat=empty}\n\\captio..."
+      },
+      {
+        "id": "figure_44",
+        "content_type": "figure",
+        "title": "Figure 6-3. Pressure recovery above the vapor pressure of the liquid results in cavitation. Remaining below the vapor pressure incures flashing.",
+        "page_no": 62,
+        "bounding_box": {
+          "top_left_x": 252,
+          "top_left_y": 292,
+          "width": 784,
+          "height": 535
+        },
+        "relevance_score": 0.4,
+        "match_type": "semantic",
+        "content_snippet": "\\includegraphics[width=\\textwidth]{https://cdn.mathpix.com/cropped/2025_08_28_14c222ac7973e4f89cc8g-062.jpg?height=535&width=784&top_left_y=292&top_left_x=252}\n\\captionsetup{labelformat=empty}\n\\captio..."
+      },
+      {
+        "id": "figure_46",
+        "content_type": "figure",
+        "title": "Figure 6-6. The top plug shows the characteristic rough texture of cavitation damage, which differs greatly from the polished appearance of damage due to flashing (lower photo). The two damage mechanisms vary greatly.",
+        "page_no": 63,
+        "bounding_box": {
+          "top_left_x": 1170,
+          "top_left_y": 271,
+          "width": 752,
+          "height": 1483
+        },
+        "relevance_score": 0.3,
+        "match_type": "keyword",
+        "content_snippet": "\\includegraphics[width=\\textwidth]{https://cdn.mathpix.com/cropped/2025_08_28_14c222ac7973e4f89cc8g-063.jpg?height=1483&width=752&top_left_y=271&top_left_x=1170}\n\\captionsetup{labelformat=empty}\n\\capt..."
+      }
+    ]
+  },
+  "Show me the overall oil & gas value chain diagram.": {
+    "status": "success",
+    "message": "Found 3 relevant results",
+    "total_found": 3,
+    "results": [
+      {
+        "id": "figure_55",
+        "content_type": "figure",
+        "title": "Figure 7-3. Product Catalog - High Pressure - D or DA; Oil and Gas - D or DA",
+        "page_no": 75,
+        "bounding_box": {
+          "top_left_x": 374,
+          "top_left_y": 1425,
+          "width": 442,
+          "height": 944
+        },
+        "relevance_score": 0.6,
+        "match_type": "keyword",
+        "content_snippet": "\\includegraphics[width=\\textwidth]{https://cdn.mathpix.com/cropped/2025_08_28_14c222ac7973e4f89cc8g-075.jpg?height=944&width=442&top_left_y=1425&top_left_x=374}\n\\captionsetup{labelformat=empty}\n\\capti..."
+      },
+      {
+        "id": "figure_98",
+        "content_type": "figure",
+        "title": "Figure 10-2. Oil Transportation Process Flow Diagram",
+        "page_no": 128,
+        "bounding_box": {
+          "top_left_x": 1151,
+          "top_left_y": 273,
+          "width": 790,
+          "height": 278
+        },
+        "relevance_score": 0.4,
+        "match_type": "semantic",
+        "content_snippet": "\\includegraphics[width=\\textwidth]{https://cdn.mathpix.com/cropped/2025_08_28_14c222ac7973e4f89cc8g-128.jpg?height=278&width=790&top_left_y=273&top_left_x=1151}\n\\captionsetup{labelformat=empty}\n\\capti..."
+      },
+      {
+        "id": "figure_122",
+        "content_type": "figure",
+        "title": "Figure 13-1. LNG Process Flow Diagram",
+        "page_no": 152,
+        "bounding_box": {
+          "top_left_x": 547,
+          "top_left_y": 271,
+          "width": 1093,
+          "height": 711
+        },
+        "relevance_score": 0.3,
+        "match_type": "keyword",
+        "content_snippet": "\\includegraphics[width=\\textwidth]{https://cdn.mathpix.com/cropped/2025_08_28_14c222ac7973e4f89cc8g-152.jpg?height=711&width=1093&top_left_y=271&top_left_x=547}\n\\captionsetup{labelformat=empty}\n\\capti..."
+      }
+    ]
+  }
+}

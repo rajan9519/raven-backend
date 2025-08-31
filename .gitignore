@@ -31,12 +31,12 @@ share/python-wheels/
 MANIFEST
 
 # FAISS Index Files
-faiss_index*
-*.faiss
-*_metadata.pkl
+# faiss_index*
+# *.faiss
+# *_metadata.pkl
 
 # Generated Files
-sample_query_results.json
+# sample_query_results.json
 
 # IDE
 .vscode/
